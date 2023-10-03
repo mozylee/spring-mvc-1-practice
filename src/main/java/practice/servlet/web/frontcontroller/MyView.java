@@ -19,4 +19,14 @@ public class MyView {
         requestDispatcher.forward(request, response);
     }
 
+    public void render(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        setModelData(model, request);
+
+        this.render(request, response);
+    }
+
+    private static void setModelData(Map<String, Object> model, HttpServletRequest request) {
+        model.forEach(request::setAttribute);
+    }
+
 }

@@ -11,7 +11,6 @@ import practice.servlet.web.frontcontroller.v1.ControllerV1;
 
 public class MemberSaveControllerV1 implements ControllerV1 {
 
-
     private static final String VIEW_PATH = "/WEB_INF/views/save-result.jsp";
 
     private final MemberRepository memberRepository = MemberRepository.getInstance();
